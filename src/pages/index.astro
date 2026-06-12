@@ -1,0 +1,172 @@
+---
+import '../styles/global.css';
+
+const title = 'ZeroBeatLabs — Turn recurring IT exports into a report your stakeholders can use';
+const description =
+  'ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and lean IT teams. Start with sanitized ticket and uptime exports; finish with a completed report, reusable template, QA controls, and a runbook.';
+const canonical = new URL('/', Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ZeroBeatLabs" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="site-name" href="#home">ZeroBeatLabs</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sprint">IT Reporting Sprint</a></li>
+            <li><a href="#proof">Proof</a></li>
+            <li><a href="#process">Process</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" aria-labelledby="hero-heading">
+        <div class="wrap">
+          <p class="eyebrow">Human-reviewed automation for IT operations</p>
+          <h1 id="hero-heading">
+            Turn recurring IT exports into a report your stakeholders can use
+          </h1>
+          <p class="lede">
+            ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and
+            lean IT teams. Start with sanitized ticket and uptime exports;
+            finish with a completed report, reusable template, QA controls,
+            and a runbook.
+          </p>
+          <p>
+            <a class="button" href="#contact">Discuss your reporting workflow</a>
+          </p>
+          <ul class="trust-strip">
+            <li>No production credentials required</li>
+            <li>Human approval built in</li>
+            <li>Fixed inputs and outputs</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="problem-heading">
+        <div class="wrap">
+          <h2 id="problem-heading">The data exists. The weekly narrative is still manual.</h2>
+          <p>
+            Ticketing, monitoring, project, and change systems already contain
+            the facts. The reporting burden comes from reconciling those facts
+            and rewriting them for clients or leadership. Generic AI summaries
+            are not enough when totals need to match and missing data must
+            stay visible.
+          </p>
+        </div>
+      </section>
+
+      <section id="sprint" aria-labelledby="offer-heading">
+        <div class="wrap">
+          <h2 id="offer-heading">AI IT Operations Report Workflow Sprint</h2>
+          <p class="price">$1,250 introductory fixed price for the first two engagements</p>
+          <h3>Includes</h3>
+          <ul class="deliverables">
+            <li>up to two sanitized export types</li>
+            <li>one completed weekly or monthly report</li>
+            <li>reusable report template</li>
+            <li>prompt and scoring rubric</li>
+            <li>human QA checklist</li>
+            <li>written runbook</li>
+            <li>45-minute handoff</li>
+            <li>one revision</li>
+          </ul>
+          <h3>Delivery</h3>
+          <p>Seven calendar days after complete requirements are received.</p>
+        </div>
+      </section>
+
+      <section id="process" aria-labelledby="process-heading">
+        <div class="wrap">
+          <h2 id="process-heading">Process</h2>
+          <ol class="process-steps">
+            <li>
+              <strong>Map</strong>
+              Agree on inputs, audience, metrics, and acceptance.
+            </li>
+            <li>
+              <strong>Build</strong>
+              Calculate the metrics and draft the report.
+            </li>
+            <li>
+              <strong>Review</strong>
+              Reconcile the output and complete human QA.
+            </li>
+            <li>
+              <strong>Handoff</strong>
+              Deliver the reusable system and operating guide.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section aria-labelledby="boundaries-heading">
+        <div class="wrap">
+          <h2 id="boundaries-heading">Boundaries</h2>
+          <p>
+            The sprint does not include production credentials, live
+            integrations, automated sending or record changes, dashboards,
+            emergency support, regulated decisions, or sensitive data.
+          </p>
+        </div>
+      </section>
+
+      <section id="proof" aria-labelledby="proof-heading">
+        <div class="wrap">
+          <h2 id="proof-heading">See the workflow before you buy it</h2>
+          <p>
+            Review the public synthetic demonstration: fictional exports, a
+            completed report, the quality rubric, reconciliation checklist,
+            and runbook. It shows the method without exposing a private
+            environment or pretending a sample is client work.
+          </p>
+          <!-- proof repo link: pending public release -->
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="wrap">
+          <h2 id="contact-heading">Have a report your team rebuilds every week?</h2>
+          <p>
+            Bring the current report and two sanitized sample exports. We will
+            quickly determine whether the fixed-scope sprint fits.
+          </p>
+          <p>
+            <span class="button" aria-disabled="true">View the Upwork project</span>
+          </p>
+          <p class="note">This link activates when the Upwork project listing is live.</p>
+          <!-- TODO: link the button to the Upwork project URL once the listing is approved. -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          &copy; {new Date().getFullYear()} ZeroBeatLabs — a service by
+          <a href="https://samjolley.com">Sam Jolley</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
