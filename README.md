@@ -64,7 +64,7 @@ domain is owned and registered at Porkbun. Go-live order:
 | "Discuss your reporting workflow" CTA | `src/pages/index.astro` hero | Points to `#contact` for now; switch to the Upwork project URL once the listing is approved |
 | "View the Upwork project" button | `src/pages/index.astro` `#contact` section | Rendered visibly disabled with a note; activate with the Upwork URL once live |
 | Proof repository link | `src/pages/index.astro` `#proof` section (HTML comment) | Add once the synthetic demonstration repo is public |
-| Contact email | `src/pages/index.astro` `#contact` section | Done 2026-06-12: `zerobeatlabs@proton.me`; switch to a `hello@` address once that mailbox exists |
+| Contact email | `src/pages/index.astro` `#contact` section | Done 2026-06-14: `hello@zerobeatlabs.org` (Google Workspace alias, receiving) |
 | Founder link to samjolley.com | footer | Done 2026-06-12: samjolley.com is live |
 | OG image | `public/og.png` + manifest icons | Done 2026-06-12: generated from design tokens and approved copy |
 | 404 page | none yet | Drafted locally, uncommitted — copy pending Sam's review |
