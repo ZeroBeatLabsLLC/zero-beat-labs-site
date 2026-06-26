@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-const title = 'ZeroBeatLabs — Turn recurring IT exports into a report your stakeholders can use';
+const title = 'ZeroBeatLabs | Turn recurring IT exports into a report your stakeholders can use';
 const description =
   'ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and lean IT teams. Start with sanitized ticket and uptime exports; finish with a completed report, reusable template, QA controls, and a runbook.';
 const canonical = new URL('/', Astro.site);
@@ -160,6 +160,10 @@ const ogImage = new URL('/og.png', Astro.site);
           <p>
             <a class="button" href="https://demo.zerobeatlabs.org/reconcile">Try the live demo</a>
           </p>
+          <p>
+            Read the method behind it:
+            <a href="/writing/why-summarizing-files-fails-for-it-operations-reports/">Why "just summarize the files" fails for IT operations reports</a>.
+          </p>
           <p class="note">All data is sample data, from a made-up organization; no client information.</p>
           <!-- secondary proof repo link: pending public release -->
         </div>
@@ -185,7 +189,7 @@ const ogImage = new URL('/og.png', Astro.site);
     <footer class="site-footer">
       <div class="wrap">
         <p>
-          &copy; {new Date().getFullYear()} ZeroBeatLabs — a service by
+          &copy; {new Date().getFullYear()} ZeroBeatLabs, a service by
           <a href="https://samjolley.com">Sam Jolley</a>
         </p>
       </div>
