@@ -2,7 +2,7 @@
 title: The checklist I run before any AI-assisted report leaves my hands
 description: Trust in an AI-assisted report comes from the review step, not the model. Here is the actual checklist, scoring rubric, and reconciliation checks I run before one ships.
 pubDate: 2026-06-24
-draft: true
+draft: false
 keywords:
   - reviewing ai output
   - ai report quality checklist

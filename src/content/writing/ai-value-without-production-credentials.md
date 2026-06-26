@@ -2,7 +2,7 @@
 title: Getting value from AI without handing over production credentials
 description: You do not need to give an AI live access or write permissions to get real leverage. Export-based, read-only automation is the safe wedge, and the constraint is a feature.
 pubDate: 2026-06-22
-draft: true
+draft: false
 keywords:
   - ai without production access
   - read-only ai automation
