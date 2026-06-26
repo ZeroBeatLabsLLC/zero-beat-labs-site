@@ -2,7 +2,7 @@
 title: Why "just summarize the files" fails for IT operations reports
 description: Handing ticket and uptime exports to a language model produces a fluent IT operations report that is often wrong. Here is the failure mode, and the method that fixes it.
 pubDate: 2026-06-26
-draft: true
+draft: false
 keywords:
   - it operations report
   - automated it reporting
