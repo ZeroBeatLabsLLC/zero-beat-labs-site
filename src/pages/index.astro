@@ -6,6 +6,33 @@ const description =
   'ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and lean IT teams. Start with sanitized ticket and uptime exports; finish with a completed report, reusable template, QA controls, and a runbook.';
 const canonical = new URL('/', Astro.site);
 const ogImage = new URL('/og.png', Astro.site);
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ZeroBeatLabs',
+  alternateName: 'Zero Beat Labs',
+  url: 'https://zerobeatlabs.org',
+  logo: 'https://zerobeatlabs.org/apple-touch-icon.png',
+  description:
+    'Human-reviewed IT operations automation. ZeroBeatLabs builds fixed-scope reporting workflows that turn ticket, uptime, project, and change exports into leadership-ready reports.',
+  founder: { '@type': 'Person', name: 'Sam Jolley', url: 'https://samjolley.com' },
+  knowsAbout: [
+    'IT operations reporting',
+    'workflow automation',
+    'MSP reporting',
+    'human-in-the-loop AI',
+  ],
+  // sameAs: list only live profiles. Add each handle as it is claimed.
+  sameAs: [
+    'https://github.com/zerobeatlabs',
+    'https://huggingface.co/ZeroBeatLabs',
+    // 'https://www.linkedin.com/company/zerobeatlabs',
+    // 'https://www.youtube.com/@zerobeatlabs',
+    // 'https://www.instagram.com/zerobeatlabs',
+    // 'https://x.com/zerobeatlabs',
+  ],
+};
 ---
 
 <!doctype html>
@@ -31,6 +58,7 @@ const ogImage = new URL('/og.png', Astro.site);
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
