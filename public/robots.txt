@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zerobeatlabs.org/sitemap.xml
+Sitemap: https://zerobeatlabs.org/sitemap-index.xml
