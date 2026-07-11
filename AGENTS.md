@@ -1,4 +1,4 @@
-# Agent guide — zero-beat-labs-site
+# Agent guide: zero-beat-labs-site
 
 Conventions for AI coding agents (Claude Code, Codex) editing this repository.
 
@@ -26,7 +26,7 @@ Conventions for AI coding agents (Claude Code, Codex) editing this repository.
 - **Sitemap + RSS are generated, never hand-edited.** `@astrojs/sitemap`
   emits `sitemap-index.xml` + `sitemap-0.xml` from the built routes;
   `src/pages/rss.xml.ts` emits `/rss.xml` from the writing collection. Do not
-  add a static `public/sitemap.xml` — it would drift the moment routes change.
+  add a static `public/sitemap.xml`; it would drift the moment routes change.
 - `public/` is copied verbatim into the build: `CNAME`, `robots.txt`,
   `favicon.svg`, icons, `og.png`.
 
@@ -39,11 +39,11 @@ Conventions for AI coding agents (Claude Code, Codex) editing this repository.
    revenue numbers, or case studies. ZeroBeatLabs claims no client outcomes
    without evidence.
 3. **CTA destinations must be valid.** The Upwork buttons stay disabled (or
-   anchor-linked) until the Upwork project URL is live — never point them at
+   anchor-linked) until the Upwork project URL is live, never point them at
    a guessed or unpublished URL.
 4. **Synthetic proof stays labeled.** The demonstration is fictional data and
    the copy says so; keep it that way.
-5. **No resume/recruiter material or career history here** — that belongs on
+5. **No resume/recruiter material or career history here.** That belongs on
    samjolley.com. The footer's one-line founder credit is the maximum.
 6. **No analytics, tracking, cookies, third-party embeds, or external fonts.**
 7. **No secrets** anywhere in the repo.

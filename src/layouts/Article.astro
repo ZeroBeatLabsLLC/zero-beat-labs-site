@@ -42,7 +42,7 @@ const ogImage = new URL('/og.png', Astro.site);
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
-    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+    {structuredData && <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />}
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
