@@ -4,12 +4,13 @@ import Article from '../layouts/Article.astro';
 
 <Article
   title="Privacy | ZeroBeatLabs"
-  description="How ZeroBeatLabs handles your data. Short version: these sites do not collect any."
+  description="How ZeroBeatLabs handles your data. Short version: these sites collect nothing unless you choose to send it."
 >
   <h1>Privacy</h1>
   <p class="lede">
     Short version: these sites collect nothing unless you choose to send it, and
-    we never sell or share what you do send.
+    we never sell it or add you to a mailing list. The one preview form is
+    handled by a third-party processor, described below.
   </p>
 
   <h2>What these sites collect</h2>
@@ -26,11 +27,17 @@ import Article from '../layouts/Article.astro';
   <p>
     On web.zerobeatlabs.org you can ask for a free website preview by submitting
     your business name, email address, and an optional message. We use those
-    details only to reply and to build the preview you asked for. We do not add
-    you to any mailing list. Submissions are delivered to us through
-    <a href="https://web3forms.com/privacy" rel="noopener">Web3Forms</a>, a
-    form-handling service that passes the message to our inbox and does not use
-    it for anything else.
+    details only to reply and to build the preview you asked for, and we do not
+    add you to any mailing list. Submissions are delivered through Web3Forms
+    (operated by Web3Creative), a third-party form processor acting on our
+    behalf. Web3Forms stores submissions encrypted at rest and may retain them
+    for up to three years before automatic deletion. To block spam, it may send
+    the submitter's IP address and email address to spam-filtering providers
+    (CleanTalk and Akismet), and it runs on Amazon Web Services, Cloudflare, and
+    Hetzner. Full details are in the
+    <a href="https://web3forms.com/privacy" rel="noopener"
+      >Web3Forms privacy policy</a
+    >.
   </p>
 
   <h2>Hosting</h2>
@@ -49,11 +56,15 @@ import Article from '../layouts/Article.astro';
     If you email
     <a href="mailto:hello@zerobeatlabs.org">hello@zerobeatlabs.org</a>, we use
     your message and email address only to respond. We do not add you to any
-    mailing list, and we do not share your details.
+    mailing list, and we never sell your details.
   </p>
 
-  <h2>No selling or sharing</h2>
-  <p>We do not sell, rent, or share personal information.</p>
+  <h2>No selling</h2>
+  <p>
+    We never sell or rent your personal information. We share it only with the
+    service providers described above, and only to deliver the preview or reply
+    you asked for.
+  </p>
 
-  <p class="note">Last updated 30 June 2026.</p>
+  <p class="note">Last updated 16 July 2026.</p>
 </Article>
