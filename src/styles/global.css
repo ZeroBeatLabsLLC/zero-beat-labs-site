@@ -127,11 +127,15 @@ a:hover {
 }
 
 .site-name {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: 0.02em;
+}
+
+.site-logo {
+  display: block;
+  height: 48px;
+  width: auto;
 }
 
 .site-nav ul {
