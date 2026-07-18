@@ -1,0 +1,248 @@
+---
+import LinkHub from '../layouts/LinkHub.astro';
+import { businessProfileLinks, contactLinks, itOperationsLinks, localBusinessLinks } from '../data/link-hub';
+
+const title = 'Links and Resources | ZeroBeatLabs';
+const description = 'Reporting workflows, local-business web services, free resources, and contact options from ZeroBeatLabs.';
+const profileSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  name: title,
+  url: 'https://zerobeatlabs.org/links/',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'ZeroBeatLabs',
+    alternateName: 'Zero Beat Labs',
+    url: 'https://zerobeatlabs.org',
+    logo: 'https://zerobeatlabs.org/icon-512.png',
+    founder: { '@type': 'Person', name: 'Sam Jolley', url: 'https://samjolley.com' },
+    sameAs: businessProfileLinks.map((link) => link.href),
+  },
+};
+---
+
+<LinkHub title={title} description={description} structuredData={profileSchema}>
+  <div class="link-hub">
+    <header class="brand-header">
+      <img class="brand-mark" src="/icon-512.png" width="512" height="512" alt="" decoding="async" />
+      <p class="eyebrow">Practical systems · human review</p>
+      <h1>ZeroBeatLabs</h1>
+      <p class="lede">Human-reviewed reporting workflows and practical web systems.</p>
+    </header>
+
+    <section class="chooser" aria-labelledby="choose-heading">
+      <div class="section-heading centered">
+        <h2 id="choose-heading">What can we help with?</h2>
+        <p>Choose the path that matches what you are trying to improve.</p>
+      </div>
+
+      <div class="path-grid">
+        <section class="path-card it-path" aria-labelledby="it-heading">
+          <p class="path-label">IT operations</p>
+          <h2 id="it-heading">For MSPs and IT teams</h2>
+          <p>Build repeatable reports from sanitized operational exports, with reconciled figures and human approval.</p>
+          <ul class="link-list">
+            {
+              itOperationsLinks.map((link, index) => (
+                <li>
+                  <a class:list={['link-card', { featured: link.featured }]} href={link.href}>
+                    <span class="link-label">{link.label}</span>
+                    {link.description && <span class="link-description">{link.description}</span>}
+                    {index >= 4 && <span class="link-source">Independent guide</span>}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="path-card local-path" aria-labelledby="local-heading">
+          <p class="path-label">Local business</p>
+          <h2 id="local-heading">For local businesses</h2>
+          <p>Get a clean, mobile-first website and a more accurate local presence without a large agency engagement.</p>
+          <ul class="link-list">
+            {
+              localBusinessLinks.map((link, index) => (
+                <li>
+                  <a class:list={['link-card', { featured: link.featured }]} href={link.href}>
+                    <span class="link-label">{link.label}</span>
+                    {link.description && <span class="link-description">{link.description}</span>}
+                    {index === 1 && <span class="link-source">Independent guide</span>}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="lower-section" aria-labelledby="more-heading">
+      <div class="section-heading"><h2 id="more-heading">More resources</h2></div>
+      <a class="wide-link" href="https://zerobeatlabs.org/writing/">
+        <span class="link-label">All ZeroBeatLabs articles</span>
+        <span class="link-description">Methods, boundaries, and practical notes on trustworthy automation.</span>
+      </a>
+    </section>
+
+    <section class="lower-section contact-section" aria-labelledby="contact-heading">
+      <div class="section-heading">
+        <h2 id="contact-heading">Talk through your project</h2>
+        <p>Start with a short call or email. No mailing list and no open-ended sales process.</p>
+      </div>
+      <ul class="link-list contact-list">
+        {
+          contactLinks.map((link) => (
+            <li>
+              <a class:list={['link-card', { featured: link.featured }]} href={link.href}>
+                <span class="link-label">{link.label}</span>
+                {link.description && <span class="link-description">{link.description}</span>}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <nav class="profile-links" aria-label="ZeroBeatLabs profiles">
+      {businessProfileLinks.map((link) => <a href={link.href}>ZeroBeatLabs on {link.label}</a>)}
+    </nav>
+  </div>
+</LinkHub>
+
+<style>
+  :global(body) {
+    background: radial-gradient(circle at 50% 0, rgba(34, 211, 238, 0.18), transparent 30rem), #f5f7fb;
+  }
+
+  :global(main) { padding: 0; }
+
+  .link-hub {
+    width: calc(100% - 2rem);
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 3rem 0 4.5rem;
+  }
+
+  .brand-header { text-align: center; margin-bottom: 3rem; }
+
+  .brand-mark {
+    display: block;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 0 auto 1.25rem;
+    border-radius: 24px;
+    box-shadow: 0 16px 36px rgba(27, 42, 107, 0.22);
+  }
+
+  .eyebrow,
+  .path-label {
+    margin: 0 0 0.5rem;
+    color: #1b2a6b;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 { margin: 0 0 0.45rem; color: #111a43; }
+  .lede { margin: 0 auto; max-width: 40rem; }
+  .link-hub section { padding: 0; }
+  .link-hub section + section { border-top: 0; }
+  .section-heading { margin-bottom: 1rem; }
+  .section-heading.centered { text-align: center; margin-bottom: 1.5rem; }
+  .section-heading h2, .path-card h2 { margin: 0 0 0.45rem; color: #111a43; }
+  .section-heading p, .path-card > p:not(.path-label) { margin: 0; color: var(--color-ink-muted); }
+  .section-heading.centered p { margin-inline: auto; }
+
+  .path-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+
+  .path-card {
+    min-width: 0;
+    padding: 1.4rem;
+    border: 1px solid #d5dceb;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 32px rgba(27, 42, 107, 0.08);
+  }
+
+  .path-card > p:not(.path-label) { margin-bottom: 1.25rem; }
+
+  .link-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .link-card,
+  .wide-link {
+    display: flex;
+    min-width: 0;
+    min-height: 3.5rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d5dceb;
+    border-radius: 11px;
+    background: #fff;
+    color: #111a43;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+  }
+
+  .link-card:hover,
+  .wide-link:hover {
+    border-color: #1b2a6b;
+    box-shadow: 0 8px 20px rgba(27, 42, 107, 0.12);
+    color: #111a43;
+    transform: translateY(-1px);
+  }
+
+  .link-card.featured { border-color: #1b2a6b; background: #1b2a6b; color: #fff; }
+  .local-path .link-card.featured { border-color: #0f6876; background: #0f6876; }
+  .link-card.featured:hover { background: #111a43; color: #fff; }
+  .local-path .link-card.featured:hover { background: #0a505b; }
+  .link-label { font-weight: 700; line-height: 1.25; }
+  .link-description { margin-top: 0.28rem; color: var(--color-ink-muted); font-size: 0.88rem; line-height: 1.45; }
+  .featured .link-description { color: rgba(255, 255, 255, 0.82); }
+
+  .link-source {
+    margin-top: 0.45rem;
+    color: #1b2a6b;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .lower-section { margin-top: 2.75rem; }
+  .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem 1.2rem;
+    margin-top: 2.75rem;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 52rem) {
+    .path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  }
+
+  @media (max-width: 36rem) {
+    .link-hub { width: calc(100% - 1.25rem); padding-top: 2rem; }
+    .contact-list { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link-card, .wide-link { transition: none; }
+    .link-card:hover, .wide-link:hover { transform: none; }
+  }
+</style>
