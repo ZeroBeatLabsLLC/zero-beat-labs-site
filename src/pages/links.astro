@@ -146,10 +146,15 @@ const profileSchema = {
     text-transform: uppercase;
   }
 
+  .brand-header .eyebrow {
+    width: fit-content;
+    margin-inline: auto;
+  }
+
   h1 { margin: 0 0 0.45rem; color: #111a43; }
   .lede { margin: 0 auto; max-width: 40rem; }
-  .link-hub section { padding: 0; }
-  .link-hub section + section { border-top: 0; }
+  .link-hub > section { padding: 0; }
+  .link-hub > section + section { border-top: 0; }
   .section-heading { margin-bottom: 1rem; }
   .section-heading.centered { text-align: center; margin-bottom: 1.5rem; }
   .section-heading h2, .path-card h2 { margin: 0 0 0.45rem; color: #111a43; }
@@ -160,7 +165,7 @@ const profileSchema = {
 
   .path-card {
     min-width: 0;
-    padding: 1.4rem;
+    padding: clamp(1.25rem, 2vw, 1.6rem);
     border: 1px solid #d5dceb;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.96);
@@ -184,7 +189,7 @@ const profileSchema = {
     min-height: 3.5rem;
     flex-direction: column;
     justify-content: center;
-    padding: 0.9rem 1rem;
+    padding: 1.05rem 1.2rem;
     border: 1px solid #d5dceb;
     border-radius: 11px;
     background: #fff;
