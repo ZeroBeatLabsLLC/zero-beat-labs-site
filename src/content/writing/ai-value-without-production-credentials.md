@@ -1,6 +1,6 @@
 ---
 title: Getting value from AI without handing over production credentials
-description: You do not need to give an AI live access or write permissions to get real leverage. Export-based, read-only automation is the safe wedge, and the constraint is a feature.
+description: The IT Reporting Workflow Sprint gets useful leverage from sanitized exports without production credentials. For this product, the no-access constraint is a feature.
 pubDate: 2026-06-22
 draft: false
 keywords:
@@ -10,7 +10,9 @@ keywords:
   - ai data access risk
 ---
 
-The thing that stops most IT teams from using AI is not the AI. It is the access. Giving a model credentials to a production system, or letting it make changes there, is a risk a careful team is right to refuse. So the question becomes whether you can get real value without taking that risk. You can. The trick is to stop thinking about access at all.
+The thing that stops most IT teams from using AI is not the AI. It is the access. Giving a model credentials to a production system, or letting it make changes there, is a risk a careful team is right to refuse. For reporting work, the question becomes whether you can get real value without taking that risk. You can. The trick is to stop thinking about access at all.
+
+This article describes the export-based boundary of the [IT Reporting Workflow Sprint](/services/it-reporting/). Governed live-system implementations use a different, client-controlled access model with scoped permissions and human approval.
 
 ## The fear that blocks adoption
 
@@ -35,14 +37,14 @@ None of that needs a live connection. All of it is the boring, recurring work th
 
 ## What you deliberately do not do
 
-The boundaries are explicit, and they are the same ones the [reporting sprint](/#sprint) commits to:
+The boundaries are explicit, and they are the same ones the [reporting sprint](/services/it-reporting/) commits to:
 
 - no production credentials
 - no live integrations
 - no automated sending or record changes
 - no regulated decisions
 
-These are not gaps waiting to be filled in a later version. They are the design.
+For the Reporting Sprint, these are not gaps waiting to be filled in a later version. They are the design.
 
 ## Why the constraint is the point
 
@@ -50,4 +52,4 @@ A boundary that you choose, document, and hold to is not a weakness. For consequ
 
 I want AI helping with the parts it is genuinely good at, structured reading, drafting, and reconciliation, and nowhere near the parts it is not, like deciding to close an incident or message a client. The export-based approach is how you get the first without ever risking the second.
 
-The boundary is the point. Start there, and AI stops being a risk you have to talk yourself into and becomes a tool you can actually use.
+For an export-based reporting workflow, the boundary is the point. Start there, and AI stops being a risk you have to talk yourself into and becomes a tool you can actually use.

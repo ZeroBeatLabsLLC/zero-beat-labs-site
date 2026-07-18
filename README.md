@@ -1,9 +1,9 @@
 # zero-beat-labs-site
 
-Buyer-facing service page for ZeroBeatLabs at
-[zerobeatlabs.org](https://zerobeatlabs.org). Single-page static Astro site
-with anchored sections (`#home`, `#sprint`, `#proof`, `#process`,
-`#contact`), deployable to GitHub Pages.
+Buyer-facing service site for ZeroBeatLabs at
+[zerobeatlabs.org](https://zerobeatlabs.org). It is a fully static Astro site
+for Governed Agentic Workflows and the IT Reporting Workflow Sprint,
+deployable to GitHub Pages with zero runtime JavaScript.
 
 ## Local development
 
@@ -15,14 +15,32 @@ npm run build      # static output to dist/
 npm run preview    # serve dist/ locally
 ```
 
-## Editing content
+## Architecture and editing
 
-- **All page copy** lives in `src/pages/index.astro`, one `<section>` per
-  topic. The headlines, CTAs, pricing, and body copy are vault-approved —
-  do not paraphrase them.
+- `src/layouts/SiteShell.astro` owns shared metadata, global navigation,
+  active-page state, the native mobile menu, and footer. Home, services,
+  writing, privacy, and 404 routes use it; the link hub keeps its specialized
+  layout.
+- Service routes live at `/services/`, `/services/agentic-workflows/`, and
+  `/services/it-reporting/`.
+- The homepage preserves `#home`, `#sprint`, `#process`, `#proof`, `#faq`, and
+  `#contact` for published deep links.
+- Headlines, CTAs, pricing, claims, and body copy are vault-approved. Follow
+  `AGENTS.md`; do not blur the no-credential Reporting Sprint boundary with
+  live, client-controlled agentic implementations.
 - **Design tokens** (colors, type, spacing) are CSS custom properties in
   `src/styles/global.css`.
 - See `AGENTS.md` before making changes with an AI coding agent.
+
+## Validation workflow
+
+Before commit, run `npm run check` and `npm run build`, then confirm the new
+routes in the generated sitemap, canonical and structured-data output, legacy
+anchors, internal links, and the absence of runtime JavaScript, analytics,
+trackers, and external fonts. Check 320px, 390px, tablet, desktop, and wide
+desktop layouts, keyboard navigation, focus, contrast, 44px touch targets,
+and the social-card text and crop. Live unfurl validation happens only after
+the GitHub Pages deployment.
 
 ## Deployment (GitHub Pages)
 
@@ -61,10 +79,8 @@ domain is owned and registered at Porkbun. Go-live order:
 
 | Item | Location | Status |
 | --- | --- | --- |
-| "Discuss your reporting workflow" CTA | `src/pages/index.astro` hero | Points to `#contact` for now; switch to the Upwork project URL once the listing is approved |
-| "View the Upwork project" button | `src/pages/index.astro` `#contact` section | Rendered visibly disabled with a note; activate with the Upwork URL once live |
-| Proof repository link | `src/pages/index.astro` `#proof` section (HTML comment) | Add once the synthetic demonstration repo is public |
-| Contact email | `src/pages/index.astro` `#contact` section | Done 2026-06-14: `hello@zerobeatlabs.org` (Google Workspace alias, receiving) |
+| Public agentic pricing | Agentic service page | Intentionally omitted; revisit after three qualified workflow mapping calls or the first paid Blueprint |
+| Contact email | Shared shell and contact sections | `hello@zerobeatlabs.org` (Google Workspace alias, receiving) |
 | Founder link to samjolley.com | footer | Done 2026-06-12: samjolley.com is live |
-| OG image | `public/og.png` + manifest icons | Done 2026-06-12: generated from design tokens and approved copy |
-| 404 page | none yet | Drafted locally, uncommitted — copy pending Sam's review |
+| General OG image | `public/og.png` + manifest icons | Existing approved brand asset |
+| Agentic OG image | `public/og-agentic.png` | Validate locally before merge; verify live unfurl after deployment |
