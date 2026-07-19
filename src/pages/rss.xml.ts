@@ -10,7 +10,7 @@ export async function GET(context: APIContext) {
   return rss({
     title: 'ZeroBeatLabs Writing',
     description:
-      'Method notes on human-reviewed automation for IT operations reporting.',
+      'Method notes on governed workflow automation, validation, and human-reviewed IT operations reporting.',
     site: context.site!,
     items: posts.map((post) => ({
       title: post.data.title,

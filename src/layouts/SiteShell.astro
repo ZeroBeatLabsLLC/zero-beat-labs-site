@@ -87,20 +87,17 @@ const navItems = [
           </ul>
         </nav>
 
-        <details class="mobile-nav">
-          <summary>Menu</summary>
-          <nav aria-label="Mobile navigation">
-            <ul>
-              {navItems.map((item) => (
-                <li>
-                  <a href={item.href} aria-current={'page' in item && item.page === activePage ? 'page' : undefined}>
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </details>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+          <ul>
+            {navItems.map((item) => (
+              <li>
+                <a href={item.href} aria-current={'page' in item && item.page === activePage ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
 

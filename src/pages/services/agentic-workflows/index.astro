@@ -109,7 +109,7 @@ const serviceSchema = {
         <p class="eyebrow">Governed workflow</p>
         <h2 id="governance-heading">Every stage has an owner, a limit, and a failure path.</h2>
       </div>
-      <div class="workflow-diagram" aria-label="Governed workflow sequence">
+      <div class="workflow-diagram" role="group" aria-label="Governed workflow sequence">
         <div class="workflow-stage"><strong>Input</strong><p>A defined trigger and approved source enter the workflow.</p></div>
         <div class="workflow-stage"><strong>Validation + approved tools</strong><p>Inputs are checked before permitted tools are used.</p></div>
         <div class="workflow-stage"><strong>AI draft or bounded action</strong><p>The system works only inside the approved specification.</p></div>
@@ -250,7 +250,7 @@ const serviceSchema = {
             restart a service, or take another consequential action.
           </p>
         </div>
-        <div class="proof-metric" aria-label="Authority boundary">
+        <div class="proof-metric" role="group" aria-label="Authority boundary">
           <strong>Monitor agent may</strong>
           <span>Read artifacts · summarize anomalies · draft next checks</span>
           <strong>Human must</strong>

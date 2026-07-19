@@ -12,7 +12,7 @@ Conventions for AI coding agents (Claude Code, Codex) editing this repository.
   and `/services/it-reporting/`. Alongside it: `/writing/`,
   `/writing/<slug>/`, `/privacy/`, `/links/`, and a 404.
 - `src/layouts/SiteShell.astro` owns shared metadata, the stable global
-  navigation, active-page state, mobile `<details>` menu, and footer for the
+  navigation, active-page state, static wrapping mobile navigation, and footer for the
   home, service, writing, privacy, and 404 routes. `Article.astro` wraps that
   shell for writing and privacy content. `LinkHub.astro` remains intentionally
   specialized and does not use the global shell.
@@ -37,9 +37,9 @@ Conventions for AI coding agents (Claude Code, Codex) editing this repository.
 1. **Approved copy is verbatim.** Every headline, CTA, price, deliverable
    list, and body paragraph comes from Sam's vault. Do not paraphrase,
    expand, or "improve" them. The canonical implementation source for the
-   governed service architecture is
-   `Agentic-Workflows-Site-Plan-2026-07-18.md` plus its companion review and
-   approved final-corrections objective.
+   governed service architecture is the approved site plan in Sam's vault,
+   dated 2026-07-18, plus its companion review and approved final-corrections
+   objective.
 2. **Keep the service boundary explicit.** "No production credentials" and
    "no system access" describe only the IT Reporting Workflow Sprint.
    Governed Agentic Workflows may use client-owned, revocable, scoped access.

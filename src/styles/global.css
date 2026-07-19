@@ -207,41 +207,9 @@ a:hover {
 
 .mobile-nav {
   display: none;
-  position: relative;
-}
-
-.mobile-nav summary {
-  display: inline-flex;
-  min-width: 72px;
-  min-height: 44px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-sm);
-  color: var(--color-indigo);
-  font-weight: 700;
-  list-style: none;
-}
-
-.mobile-nav summary::-webkit-details-marker {
-  display: none;
-}
-
-.mobile-nav[open] nav {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  width: min(18rem, calc(100vw - 2rem));
-  padding: var(--space-1);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: #ffffff;
-  box-shadow: 0 12px 28px rgb(16 25 66 / 14%);
 }
 
 .mobile-nav a {
-  width: 100%;
   padding-inline: var(--space-2);
 }
 
@@ -504,7 +472,7 @@ section + section {
   position: absolute;
   left: 0;
   color: var(--color-cyan-dark);
-  content: '✓';
+  content: '✓' / '';
   font-weight: 900;
 }
 
@@ -512,7 +480,7 @@ section + section {
   position: absolute;
   left: 0;
   color: var(--color-danger);
-  content: '—';
+  content: '—' / '';
   font-weight: 900;
 }
 
@@ -569,6 +537,10 @@ section + section {
 
 .proof-metric strong {
   font-size: var(--text-lg);
+}
+
+.proof-metric .sample-label {
+  color: #ffffff;
 }
 
 .note,
@@ -652,7 +624,7 @@ section + section {
   display: block;
   margin-top: var(--space-2);
   color: var(--color-cyan-dark);
-  content: '↓';
+  content: '↓' / '';
   font-size: 1.4rem;
   font-weight: 900;
   text-align: center;
@@ -877,7 +849,7 @@ section + section {
     right: -1.3rem;
     width: 1rem;
     margin: 0;
-    content: '→';
+    content: '→' / '';
     transform: translateY(-50%);
   }
 
@@ -895,8 +867,27 @@ section + section {
     display: none;
   }
 
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0;
+    padding-top: 0.35rem;
+  }
+
   .mobile-nav {
     display: block;
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mobile-nav a {
+    width: auto;
+    padding: 0.45rem 0.6rem;
   }
 
   .site-logo {
