@@ -432,12 +432,6 @@ section + section {
   padding-top: var(--space-2);
 }
 
-.service-card .price {
-  color: var(--color-indigo);
-  font-size: var(--text-lg);
-  font-weight: 800;
-}
-
 .fit-panel {
   padding: var(--space-3);
 }
@@ -692,12 +686,6 @@ section + section {
 .authority-table th {
   background: var(--color-surface);
   color: var(--color-indigo-deep);
-}
-
-.price {
-  color: var(--color-indigo);
-  font-size: var(--text-lg);
-  font-weight: 800;
 }
 
 .article-shell {

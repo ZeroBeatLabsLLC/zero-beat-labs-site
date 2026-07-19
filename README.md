@@ -79,7 +79,7 @@ domain is owned and registered at Porkbun. Go-live order:
 
 | Item | Location | Status |
 | --- | --- | --- |
-| Public agentic pricing | Agentic service page | Intentionally omitted; revisit after three qualified workflow mapping calls or the first paid Blueprint |
+| Public service pricing | All service pages | Intentionally omitted; pricing is tailored to business requirements and shared as the engagement is scoped after a workflow mapping call |
 | Contact email | Shared shell and contact sections | `hello@zerobeatlabs.org` (Google Workspace alias, receiving) |
 | Founder link to samjolley.com | footer | Done 2026-06-12: samjolley.com is live |
 | General OG image | `public/og.png` + manifest icons | Existing approved brand asset |
