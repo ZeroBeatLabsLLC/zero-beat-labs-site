@@ -1,0 +1,173 @@
+---
+import SiteShell from '../../../layouts/SiteShell.astro';
+
+const title = 'IT Reporting Workflow Sprint | ZeroBeatLabs';
+const description =
+  'Turn sanitized ticket and uptime exports into a completed report, reusable template, QA controls, and a runbook—without production credentials.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'IT Reporting Workflow Sprint',
+  serviceType: 'IT operations reporting workflow',
+  url: 'https://zerobeatlabs.org/services/it-reporting/',
+  description,
+  provider: {
+    '@type': 'Organization',
+    name: 'ZeroBeatLabs',
+    url: 'https://zerobeatlabs.org',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '1250',
+    priceCurrency: 'USD',
+    description: 'Introductory fixed price for the first two engagements',
+  },
+  areaServed: 'United States',
+};
+---
+
+<SiteShell title={title} description={description} activePage="services" structuredData={serviceSchema}>
+  <section class="hero" aria-labelledby="reporting-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/#home">Home</a><span aria-hidden="true">/</span>
+          <a href="/services/">Services</a><span aria-hidden="true">/</span>
+          <span>IT Reporting</span>
+        </nav>
+        <p class="eyebrow">IT Reporting Workflow Sprint</p>
+        <h1 id="reporting-hero">Turn recurring IT exports into a report your stakeholders can use.</h1>
+        <p class="lede">
+          Start with sanitized ticket and uptime exports; finish with a completed
+          report, reusable template, QA controls, and a runbook.
+        </p>
+        <p class="price">$1,250 introductory fixed price for the first two engagements</p>
+        <div class="hero-actions">
+          <a class="button" href="#reporting-contact">Discuss your reporting workflow</a>
+          <a class="button button-secondary" href="#proof">See the proof</a>
+        </div>
+        <ul class="trust-strip">
+          <li>No production credentials required</li>
+          <li>Human approval built in</li>
+          <li>Fixed inputs and outputs</li>
+        </ul>
+      </div>
+      <aside class="hero-side" aria-label="Delivery summary">
+        <p class="label">Delivery</p>
+        <p>Seven calendar days after complete requirements are received.</p>
+        <p class="note">One-time engagement. Fixed scope, no retainer, no lock-in.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-soft" aria-labelledby="reporting-includes">
+    <div class="wrap fit-grid">
+      <div>
+        <p class="eyebrow">Included</p>
+        <h2 id="reporting-includes">A completed report and the reusable workflow behind it.</h2>
+      </div>
+      <div>
+        <ul class="deliverables">
+          <li>Up to two sanitized export types</li>
+          <li>One completed weekly or monthly report</li>
+          <li>Reusable report template</li>
+          <li>Prompt and scoring rubric</li>
+          <li>Human QA checklist</li>
+          <li>Written runbook</li>
+          <li>45-minute handoff</li>
+          <li>One revision</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="reporting-process">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Process</p>
+        <h2 id="reporting-process">Calculation first. Narrative second. Human approval before delivery.</h2>
+      </div>
+      <ol class="method-grid">
+        <li class="method-step"><span class="step-number">01 / Map</span><h3>Agree on the report</h3><p>Define inputs, audience, metrics, and acceptance.</p></li>
+        <li class="method-step"><span class="step-number">02 / Build</span><h3>Calculate and draft</h3><p>Calculate the metrics and draft the report.</p></li>
+        <li class="method-step"><span class="step-number">03 / Review</span><h3>Reconcile the output</h3><p>Reconcile the output and complete human QA.</p></li>
+        <li class="method-step"><span class="step-number">04 / Handoff</span><h3>Deliver the system</h3><p>Deliver the reusable system and operating guide.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-soft" aria-labelledby="reporting-boundaries">
+    <div class="wrap fit-grid">
+      <div>
+        <p class="eyebrow">Boundaries</p>
+        <h2 id="reporting-boundaries">The no-credential boundary is part of this product.</h2>
+      </div>
+      <div>
+        <p>
+          The sprint does not include production credentials, live integrations,
+          automated sending or record changes, dashboards, emergency support,
+          regulated decisions, or sensitive data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof" aria-labelledby="reporting-proof">
+    <div class="wrap">
+      <div class="proof-panel">
+        <div>
+          <p class="eyebrow">Public demonstration</p>
+          <h2 id="reporting-proof">See the workflow before you buy it.</h2>
+          <p>
+            Review the public sample demonstration. It shows the method without
+            exposing a private environment or pretending a sample is client work.
+          </p>
+          <ul class="deliverables">
+            <li>Sample sanitized exports for tickets and uptime</li>
+            <li>A completed report</li>
+            <li>A live recount that checks every material number against the raw exports</li>
+          </ul>
+          <p><a class="button" href="https://demo.zerobeatlabs.org/reconcile">Try the live demo</a></p>
+          <p class="note">All data is sample data, from a made-up organization; no client information.</p>
+        </div>
+        <div class="proof-metric">
+          <span class="sample-label">Sample data</span>
+          <strong>Every material number is recomputed.</strong>
+          <span>Reconciled before human-approved delivery.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="reporting-faq">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Common questions</p>
+        <h2 id="reporting-faq">A fixed-scope reporting product.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Do you need access to our systems?</summary><div><p>No. You send sample-shaped ticket and uptime exports. No production credentials, no live integrations, no changes to your records.</p></div></details>
+        <details><summary>How long does it take?</summary><div><p>Seven calendar days after complete requirements are received.</p></div></details>
+        <details><summary>How do I know the numbers are right?</summary><div><p>Every material number is recomputed from the source rows and reconciled before delivery, and a named human approves the report. One revision is included.</p></div></details>
+        <details><summary>Do I have to sign up for anything ongoing?</summary><div><p>No. The sprint is fixed-scope and one-time. There is no retainer and no lock-in.</p></div></details>
+        <details><summary>Is this just an AI summary of my files?</summary><div><p>No. Calculation is deterministic, the AI drafts only the narrative, and a human reconciles every material number. You can watch the method run in the live demo before you buy.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-ink" aria-labelledby="reporting-contact">
+    <div class="wrap">
+      <p class="eyebrow">Bring the current report</p>
+      <h2 id="reporting-contact">Have a report your team rebuilds every week?</h2>
+      <p class="lede">
+        Bring the current report and two sanitized sample exports. We will quickly
+        determine whether the fixed-scope sprint fits.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="mailto:hello@zerobeatlabs.org">Email hello@zerobeatlabs.org</a>
+        <a class="button button-secondary" href="https://calendar.app.google/ZzgzTAhCFCk1oxBH8">Book a 10-minute call</a>
+      </div>
+    </div>
+  </section>
+</SiteShell>

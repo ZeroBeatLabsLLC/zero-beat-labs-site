@@ -1,11 +1,9 @@
 ---
-import '../styles/global.css';
+import SiteShell from '../layouts/SiteShell.astro';
 
-const title = 'ZeroBeatLabs | Turn recurring IT exports into a report your stakeholders can use';
+const title = 'ZeroBeatLabs | Governed workflow automation for IT and operations';
 const description =
-  'ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and lean IT teams. Start with sanitized ticket and uptime exports; finish with a completed report, reusable template, QA controls, and a runbook.';
-const canonical = new URL('/', Astro.site);
-const ogImage = new URL('/og.png', Astro.site);
+  'ZeroBeatLabs builds governed AI workflow automation for MSPs, internal IT, professional services, and lean operations teams, with defined authority and human ownership.';
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -14,17 +12,19 @@ const orgSchema = {
   alternateName: 'Zero Beat Labs',
   url: 'https://zerobeatlabs.org',
   telephone: '+1-810-230-4295',
+  email: 'hello@zerobeatlabs.org',
   logo: 'https://zerobeatlabs.org/apple-touch-icon.png',
   description:
-    'Human-reviewed IT operations automation. ZeroBeatLabs builds fixed-scope reporting workflows that turn ticket, uptime, project, and change exports into leadership-ready reports.',
+    'Governed workflow automation for IT and operations, including controlled agentic workflows and a fixed-scope IT reporting workflow sprint.',
   founder: { '@type': 'Person', name: 'Sam Jolley', url: 'https://samjolley.com' },
   knowsAbout: [
-    'IT operations reporting',
     'workflow automation',
+    'AI automation with human approval',
+    'IT operations reporting',
     'MSP reporting',
     'human-in-the-loop AI',
+    'automation governance',
   ],
-  // sameAs: list only live profiles. Add each handle as it is claimed.
   sameAs: [
     'https://github.com/zerobeatlabs',
     'https://huggingface.co/ZeroBeatLabs',
@@ -42,230 +42,275 @@ const orgSchema = {
 };
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#1B2A6B" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="ZeroBeatLabs Writing"
-      href="/rss.xml"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="ZeroBeatLabs" />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={title} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(orgSchema)} />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="site-name" href="#home">
-          <img class="site-logo" src="/logo.png" width="1600" height="800" alt="ZeroBeatLabs" />
-        </a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sprint">IT Reporting Sprint</a></li>
-            <li><a href="#proof">Proof</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#faq">Common questions</a></li>
-            <li><a href="/writing/">Writing</a></li>
-          </ul>
-        </nav>
+<SiteShell
+  title={title}
+  description={description}
+  activePage="home"
+  structuredData={orgSchema}
+  ogImageAlt="ZeroBeatLabs — governed workflow automation for IT and operations"
+>
+  <section id="home" class="hero" aria-labelledby="hero-heading">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Governed workflow automation for IT and operations.</p>
+        <h1 id="hero-heading">Move recurring work forward without giving AI unchecked authority.</h1>
+        <p class="lede">
+          ZeroBeatLabs builds controlled workflows for MSPs, internal IT,
+          professional services, and lean operations teams. Each workflow uses
+          defined inputs, approved tools, validation, and human ownership.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="/services/agentic-workflows/">Explore Agentic Workflows</a>
+          <a class="button button-secondary" href="/services/it-reporting/">See the Reporting Sprint</a>
+        </div>
       </div>
-    </header>
+      <aside class="hero-side" aria-label="Operating principles">
+        <p class="label">Control stays visible</p>
+        <p>Named owners. Scoped access. Approval gates. Logged outputs. Manual recovery.</p>
+      </aside>
+    </div>
+  </section>
 
-    <main id="main">
-      <section id="home" aria-labelledby="hero-heading">
-        <div class="wrap">
-          <p class="eyebrow">Human-reviewed automation for IT operations</p>
-          <h1 id="hero-heading">
-            Turn recurring IT exports into a report your stakeholders can use
-          </h1>
-          <p class="lede">
-            ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and
-            lean IT teams. Start with sanitized ticket and uptime exports;
-            finish with a completed report, reusable template, QA controls,
-            and a runbook.
-          </p>
+  <section class="section-soft" aria-labelledby="services-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Two ways to begin</p>
+        <h2 id="services-heading">Choose the level of access the work actually needs.</h2>
+        <p class="lede">
+          The Reporting Sprint works from sanitized exports with no production credentials.
+          Governed Agentic Workflows can work inside live systems through client-controlled,
+          revocable access and explicit authority boundaries.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <p class="label">Flagship service · live systems, human-governed</p>
+          <h3>Governed Agentic Workflows</h3>
           <p>
-            <a class="button" href="#contact">Discuss your reporting workflow</a>
+            Start with a scoped Workflow and Governance Blueprint, then move to a
+            controlled pilot or custom fixed-scope implementation.
           </p>
-          <ul class="trust-strip">
-            <li>No production credentials required</li>
-            <li>Human approval built in</li>
-            <li>Fixed inputs and outputs</li>
+          <ul class="plain-list">
+            <li>Client-owned, least-privilege access</li>
+            <li>Named approvals and explicit pre-authorization</li>
+            <li>Exception handling, kill switch, and manual fallback</li>
           </ul>
-        </div>
-      </section>
+          <div class="card-actions">
+            <a class="button" href="/services/agentic-workflows/">Explore Agentic Workflows</a>
+          </div>
+        </article>
 
-      <section aria-labelledby="problem-heading">
-        <div class="wrap">
-          <h2 id="problem-heading">The data exists. The weekly narrative is still manual.</h2>
-          <p>
-            Ticketing, monitoring, project, and change systems already contain
-            the facts. The reporting burden comes from reconciling those facts
-            and rewriting them for clients or leadership. Generic AI summaries
-            are not enough when totals need to match and missing data must
-            stay visible.
-          </p>
-        </div>
-      </section>
-
-      <section id="sprint" aria-labelledby="offer-heading">
-        <div class="wrap">
-          <h2 id="offer-heading">AI IT Operations Report Workflow Sprint</h2>
+        <article id="sprint" class="service-card reporting-card">
+          <p class="label">Entry service · sanitized exports, no credentials</p>
+          <h3>IT Reporting Workflow Sprint</h3>
           <p class="price">$1,250 introductory fixed price for the first two engagements</p>
-          <h3>Includes</h3>
-          <ul class="deliverables">
-            <li>up to two sanitized export types</li>
-            <li>one completed weekly or monthly report</li>
-            <li>reusable report template</li>
-            <li>prompt and scoring rubric</li>
-            <li>human QA checklist</li>
-            <li>written runbook</li>
-            <li>45-minute handoff</li>
-            <li>one revision</li>
-          </ul>
-          <h3>Delivery</h3>
-          <p>Seven calendar days after complete requirements are received.</p>
-          <p>One-time engagement. Fixed scope, no retainer, no lock-in.</p>
-        </div>
-      </section>
-
-      <section id="process" aria-labelledby="process-heading">
-        <div class="wrap">
-          <h2 id="process-heading">Process</h2>
-          <ol class="process-steps">
-            <li>
-              <strong>Map</strong>
-              Agree on inputs, audience, metrics, and acceptance.
-            </li>
-            <li>
-              <strong>Build</strong>
-              Calculate the metrics and draft the report.
-            </li>
-            <li>
-              <strong>Review</strong>
-              Reconcile the output and complete human QA.
-            </li>
-            <li>
-              <strong>Handoff</strong>
-              Deliver the reusable system and operating guide.
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section aria-labelledby="boundaries-heading">
-        <div class="wrap">
-          <h2 id="boundaries-heading">Boundaries</h2>
           <p>
-            The sprint does not include production credentials, live
-            integrations, automated sending or record changes, dashboards,
-            emergency support, regulated decisions, or sensitive data.
+            Turn up to two sanitized export types into a completed report, reusable
+            template, QA controls, and a written runbook.
           </p>
-        </div>
-      </section>
+          <div class="card-actions">
+            <a class="button" href="/services/it-reporting/">See the Reporting Sprint</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <section id="faq" aria-labelledby="faq-heading">
-        <div class="wrap">
-          <h2 id="faq-heading">Common questions</h2>
-          <h3>Do you need access to our systems?</h3>
-          <p>No. You send sample-shaped ticket and uptime exports. No production credentials, no live integrations, no changes to your records.</p>
-          <h3>How long does it take?</h3>
-          <p>Seven calendar days after complete requirements are received.</p>
-          <h3>How do I know the numbers are right?</h3>
-          <p>Every material number is recomputed from the source rows and reconciled before delivery, and a named human approves the report. One revision is included.</p>
-          <h3>Do I have to sign up for anything ongoing?</h3>
-          <p>No. The sprint is fixed-scope and one-time. There is no retainer and no lock-in.</p>
-          <h3>Is this just an AI summary of my files?</h3>
-          <p>No. Calculation is deterministic, the AI drafts only the narrative, and a human reconciles every figure. You can watch the method run in the live demo before you buy.</p>
-        </div>
-      </section>
-
-      <section id="proof" aria-labelledby="proof-heading">
-        <div class="wrap">
-          <h2 id="proof-heading">See the workflow before you buy it</h2>
-          <p>
-            Review the public sample demonstration. It shows the method
-            without exposing a private environment or pretending a sample is
-            client work.
-          </p>
-          <p>The demonstration includes:</p>
-          <ul class="deliverables">
-            <li>sample sanitized exports (tickets and uptime)</li>
-            <li>a completed report</li>
-            <li>a live recount that checks every figure against the raw exports</li>
-          </ul>
-          <p>
-            <a class="button" href="https://demo.zerobeatlabs.org/reconcile">Try the live demo</a>
-          </p>
-          <p>
-            Read the method behind it:
-            <a href="/writing/why-summarizing-files-fails-for-it-operations-reports/">Why "just summarize the files" fails for IT operations reports</a>.
-          </p>
-          <p class="note">All data is sample data, from a made-up organization; no client information.</p>
-          <!-- secondary proof repo link: pending public release -->
-        </div>
-      </section>
-
-      <section id="contact" aria-labelledby="contact-heading">
-        <div class="wrap">
-          <h2 id="contact-heading">Have a report your team rebuilds every week?</h2>
-          <p>
-            Bring the current report and two sanitized sample exports. We will
-            quickly determine whether the fixed-scope sprint fits.
-          </p>
-          <p>
-            <a class="button" href="mailto:hello@zerobeatlabs.org">hello@zerobeatlabs.org</a>
-          </p>
-          <p class="note">
-            Prefer to talk first? Call <a href="tel:+18102304295">(810) 230-4295</a>
-            or <a href="https://calendar.app.google/ZzgzTAhCFCk1oxBH8">book a 10-minute call</a>.
-          </p>
-          <p class="note">
-            The reporting sprint is the flagship of a broader human-reviewed IT
-            and AI automation practice. For other fixed-scope IT or AI work, use
-            the same address above.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <p>
-          &copy; {new Date().getFullYear()} ZeroBeatLabs LLC &middot; a service by
-          <a href="https://samjolley.com">Sam Jolley</a>
-          &middot; <a href="tel:+18102304295">(810) 230-4295</a>
-          &middot; <a href="/privacy/">Privacy</a>
-        </p>
-        <p>
-          We also build clean, fast websites for local businesses at
-          <a href="https://web.zerobeatlabs.org">web.zerobeatlabs.org</a>.
+  <section aria-labelledby="fit-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Workflow fit</p>
+        <h2 id="fit-heading">Start with the process, not the tool.</h2>
+        <p class="lede">
+          A strong candidate is recurring, consequential enough to matter, and defined
+          well enough that success and failure can both be recognized.
         </p>
       </div>
-    </footer>
-  </body>
-</html>
+      <div class="fit-grid">
+        <div class="fit-panel">
+          <h3>Good fit</h3>
+          <ul class="check-list">
+            <li>Recurring, material work</li>
+            <li>A known owner and review standard</li>
+            <li>Stable inputs or systems</li>
+            <li>Measurable delays, errors, or dropped handoffs</li>
+            <li>Clear consequences and reversibility</li>
+          </ul>
+        </div>
+        <div class="fit-panel anti-fit">
+          <h3>Not a fit</h3>
+          <ul class="anti-list">
+            <li>Undefined processes</li>
+            <li>Regulated final decisions</li>
+            <li>Uncontrolled customer actions</li>
+            <li>No human owner</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section-soft" aria-labelledby="process-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">How we work</p>
+        <h2 id="process-heading">Map → Bound → Pilot → Prove and hand off.</h2>
+      </div>
+      <ol class="method-grid">
+        <li class="method-step">
+          <span class="step-number">01 / Map</span>
+          <h3>Define the work</h3>
+          <p>Agree on the owner, inputs, decisions, outputs, exceptions, and acceptance standard.</p>
+        </li>
+        <li class="method-step">
+          <span class="step-number">02 / Bound</span>
+          <h3>Limit authority</h3>
+          <p>Specify tools, permissions, approvals, pre-authorized actions, and the kill switch.</p>
+        </li>
+        <li class="method-step">
+          <span class="step-number">03 / Pilot</span>
+          <h3>Test the real edges</h3>
+          <p>Run a controlled workflow with validation, error branches, and manual recovery.</p>
+        </li>
+        <li class="method-step">
+          <span class="step-number">04 / Prove + hand off</span>
+          <h3>Leave an operable system</h3>
+          <p>Evaluate against acceptance tests, document ownership, and hand over the runbook.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="proof" aria-labelledby="proof-heading">
+    <div class="wrap">
+      <div class="proof-panel">
+        <div>
+          <p class="eyebrow">Proof of method</p>
+          <h2 id="proof-heading">See the validation and human-review method before you buy it.</h2>
+          <p>
+            The public reporting demonstration shows deterministic calculation,
+            reconciliation, and named human review. It is proof of the method, not
+            proof of a deployed agentic client system.
+          </p>
+          <p>
+            The demonstration uses sanitized sample exports from a made-up organization;
+            it contains no client information.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://demo.zerobeatlabs.org/reconcile">Try the live reporting demo</a>
+            <a class="button button-secondary" href="/services/agentic-workflows/#artifacts">See agentic proof artifacts</a>
+          </div>
+        </div>
+        <div class="proof-metric" role="group" aria-label="Demonstration scope">
+          <span class="sample-label">Sample data</span>
+          <strong>Inputs → recount → narrative → human approval</strong>
+          <span>No production system access.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-soft" aria-labelledby="faq-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Common questions</p>
+        <h2 id="faq-heading">What stays under human control?</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What is the difference between the two services?</summary>
+          <div>
+            <p>
+              The IT Reporting Workflow Sprint works from sanitized exports and never
+              needs production credentials. Governed Agentic Workflows may use live
+              systems through client-owned, scoped, revocable access defined in an
+              approved workflow specification.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you need our passwords?</summary>
+          <div>
+            <p>
+              No. Discovery can use sanitized or sample-shaped data. When a live
+              implementation needs access, it uses accounts controlled by the client;
+              the client grants and can revoke the scoped access. ZeroBeatLabs never
+              asks the client to hand over passwords.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Which actions require approval?</summary>
+          <div>
+            <p>
+              Consequential, customer-facing, financial, destructive, or record-of-truth
+              actions require named human approval. Lower-risk actions may be automated
+              only when explicitly pre-authorized in the approved workflow specification,
+              logged, bounded, and recoverable.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens when the workflow is wrong or a dependency fails?</summary>
+          <div>
+            <p>
+              Every workflow includes input and result validation, exception handling,
+              a kill switch, and a documented manual fallback. The human owner remains
+              responsible for the process and decides how exceptions move forward.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Who owns the accounts and operating artifacts?</summary>
+          <div>
+            <p>
+              Live accounts remain controlled by the client. The workflow map,
+              permission and approval matrix, acceptance tests, runbook, and handoff
+              materials are delivered so the client can operate the bounded workflow.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What does it cost?</summary>
+          <div>
+            <p>
+              The Reporting Sprint is $1,250 at the introductory fixed price for the
+              first two engagements. Agentic work starts with a short workflow mapping call; the
+              paid Blueprint and any custom fixed-scope implementation are quoted after
+              the workflow is understood.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="writing-heading">
+    <div class="wrap">
+      <p class="eyebrow">Writing</p>
+      <h2 id="writing-heading">The method behind the work.</h2>
+      <p class="lede">
+        Read practical notes on validation, reconciliation, evidence boundaries,
+        and human-reviewed automation.
+      </p>
+      <p><a class="button button-secondary" href="/writing/">Browse the writing</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="section-ink" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <p class="eyebrow">Start with one workflow</p>
+      <h2 id="contact-heading">Bring the recurring work your team cannot afford to leave vague.</h2>
+      <p class="lede">
+        We will identify the owner, the review standard, the access boundary, and
+        whether the right next step is the Reporting Sprint or a Workflow and
+        Governance Blueprint.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="https://calendar.app.google/ZzgzTAhCFCk1oxBH8">Book a 10-minute workflow mapping call</a>
+        <a class="button button-secondary" href="mailto:hello@zerobeatlabs.org">Email hello@zerobeatlabs.org</a>
+      </div>
+    </div>
+  </section>
+</SiteShell>

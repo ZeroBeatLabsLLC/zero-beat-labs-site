@@ -1,0 +1,310 @@
+---
+import SiteShell from '../../../layouts/SiteShell.astro';
+
+const title = 'Governed Agentic Workflows | ZeroBeatLabs';
+const description =
+  'Custom fixed-scope workflow automation and AI automation with human approval, scoped access, logged actions, exception handling, and a manual fallback.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Governed Agentic Workflows',
+  serviceType: 'Workflow automation and AI automation with human approval',
+  url: 'https://zerobeatlabs.org/services/agentic-workflows/',
+  description,
+  provider: {
+    '@type': 'Organization',
+    name: 'ZeroBeatLabs',
+    url: 'https://zerobeatlabs.org',
+  },
+  areaServed: 'United States',
+};
+---
+
+<SiteShell
+  title={title}
+  description={description}
+  activePage="services"
+  structuredData={serviceSchema}
+  ogImage="/og-agentic.png"
+  ogImageAlt="Put AI to work inside a process you control — ZeroBeatLabs"
+>
+  <section class="hero" aria-labelledby="agentic-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/#home">Home</a><span aria-hidden="true">/</span>
+          <a href="/services/">Services</a><span aria-hidden="true">/</span>
+          <span>Agentic Workflows</span>
+        </nav>
+        <p class="eyebrow">Governed Agentic Workflows</p>
+        <h1 id="agentic-hero">Put AI to work inside a process you control.</h1>
+        <p class="lede">
+          An agentic workflow is AI automation inside a defined process. It works
+          from approved inputs, uses approved tools, produces a draft or bounded
+          action, and routes consequential decisions to a named human owner.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="https://calendar.app.google/ZzgzTAhCFCk1oxBH8">Map a workflow</a>
+          <a class="button button-secondary" href="#governance">See how governance works</a>
+        </div>
+      </div>
+      <aside class="hero-side" aria-label="Authority summary">
+        <p class="label">Authority is designed, not assumed</p>
+        <p>Client-controlled access. Named approvals. Explicit pre-authorization. Logged output. Kill switch.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section aria-labelledby="agentic-fit">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Workflow fit</p>
+        <h2 id="agentic-fit">Use agentic automation where a bounded action moves real work forward.</h2>
+      </div>
+      <div class="fit-grid">
+        <div class="fit-panel">
+          <h3>Good fit</h3>
+          <ul class="check-list">
+            <li>Recurring, material work</li>
+            <li>A known owner and review standard</li>
+            <li>Stable inputs or systems</li>
+            <li>Measurable delays, errors, or dropped handoffs</li>
+            <li>Clear consequences and reversibility</li>
+          </ul>
+        </div>
+        <div class="fit-panel anti-fit">
+          <h3>Not a fit</h3>
+          <ul class="anti-list">
+            <li>Undefined processes</li>
+            <li>Regulated final decisions</li>
+            <li>Uncontrolled customer actions</li>
+            <li>No human owner</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" aria-labelledby="workflow-examples">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Example workflow families</p>
+        <h2 id="workflow-examples">Recurring handoffs with a clear review standard.</h2>
+        <p>Examples are starting points. The approved specification defines what any implementation may actually do.</p>
+      </div>
+      <div class="example-grid">
+        <article class="example-card"><h3>Intake and triage</h3><p>Validate incoming material, classify it, and route exceptions to the right owner.</p></article>
+        <article class="example-card"><h3>Proposal or document assembly</h3><p>Gather approved facts, produce a structured draft, and hold release for review.</p></article>
+        <article class="example-card"><h3>Follow-up drafting</h3><p>Prepare a bounded response from approved context without sending it autonomously.</p></article>
+        <article class="example-card"><h3>Operations briefings and reporting</h3><p>Reconcile recurring inputs, surface exceptions, and assemble the review packet.</p></article>
+        <article class="example-card"><h3>Exception queues and cross-system coordination</h3><p>Move low-risk steps forward and escalate anything outside the defined path.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="governance" aria-labelledby="governance-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Governed workflow</p>
+        <h2 id="governance-heading">Every stage has an owner, a limit, and a failure path.</h2>
+      </div>
+      <div class="workflow-diagram" role="group" aria-label="Governed workflow sequence">
+        <div class="workflow-stage"><strong>Input</strong><p>A defined trigger and approved source enter the workflow.</p></div>
+        <div class="workflow-stage"><strong>Validation + approved tools</strong><p>Inputs are checked before permitted tools are used.</p></div>
+        <div class="workflow-stage"><strong>AI draft or bounded action</strong><p>The system works only inside the approved specification.</p></div>
+        <div class="workflow-stage"><strong>Human approval or exception</strong><p>Consequential work waits; unexpected cases leave the happy path.</p></div>
+        <div class="workflow-stage"><strong>Logged output</strong><p>The result, decision, and recovery status remain inspectable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="access" class="section-ink" aria-labelledby="access-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Access and authority</p>
+        <h2 id="access-heading">Your accounts. Your access controls. Your decision gates.</h2>
+        <p>
+          Discovery can use sanitized or sample-shaped data. Live implementation
+          uses accounts controlled by the client. The client grants and can revoke
+          scoped access. ZeroBeatLabs never asks the client to hand over passwords.
+        </p>
+      </div>
+      <div class="proof-panel">
+        <div>
+          <h3>Approval is proportional to consequence.</h3>
+          <p>
+            Consequential, customer-facing, financial, destructive, or
+            record-of-truth actions require named human approval.
+          </p>
+          <p>
+            Lower-risk automated actions are allowed only when explicitly authorized
+            in the approved workflow specification, logged, bounded, and recoverable.
+          </p>
+        </div>
+        <div class="proof-metric">
+          <strong>Every workflow includes</strong>
+          <span>Exception handling</span>
+          <span>A kill switch</span>
+          <span>A documented manual fallback</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="engagement-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Commercial model</p>
+        <h2 id="engagement-heading">Blueprint → Pilot → Evaluate → Handoff or bounded support.</h2>
+      </div>
+      <ol class="method-grid">
+        <li class="method-step"><span class="step-number">01 / Workflow mapping call</span><h3>Choose one workflow</h3><p>Confirm the owner, recurring value, current process, and consequences.</p></li>
+        <li class="method-step"><span class="step-number">02 / Paid Blueprint</span><h3>Specify the controls</h3><p>Map inputs, tools, permissions, approvals, tests, exceptions, and recovery.</p></li>
+        <li class="method-step"><span class="step-number">03 / Fixed-scope pilot</span><h3>Test the bounded system</h3><p>Run the happy path, invalid input, dependency failure, duplicate event, and fallback.</p></li>
+        <li class="method-step"><span class="step-number">04 / Handoff</span><h3>Leave named ownership</h3><p>Deliver operating artifacts plus optional monitoring and tuning with explicit limits.</p></li>
+      </ol>
+      <p class="note engagement-note">
+        The Blueprint and any custom fixed-scope implementation are quoted after the workflow mapping call.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-soft" aria-labelledby="deliverables-heading">
+    <div class="wrap fit-grid">
+      <div>
+        <p class="eyebrow">Deliverables</p>
+        <h2 id="deliverables-heading">The operating artifacts stay visible.</h2>
+      </div>
+      <div>
+        <ul class="deliverables">
+          <li>Workflow map with inputs, outputs, owners, and exceptions</li>
+          <li>Permission and approval matrix</li>
+          <li>Approved workflow specification and acceptance tests</li>
+          <li>Logging, error handling, kill switch, and manual recovery design</li>
+          <li>Runbook, handoff, and named operating responsibilities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="artifacts" aria-labelledby="artifacts-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Public-safe proof artifacts</p>
+        <h2 id="artifacts-heading">See the control surfaces, not confidential source material.</h2>
+        <p>
+          These explanatory artifacts are illustrative. They show the shape of a
+          governed implementation without exposing internal operating documents, client data,
+          credentials, or confidential operating details.
+        </p>
+      </div>
+      <div class="artifact-grid">
+        <article class="artifact-card">
+          <span class="sample-label">Illustrative example</span>
+          <h3>Workflow map</h3>
+          <p>Trigger → validation → bounded work → approval or exception → logged output.</p>
+          <div class="artifact-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+        <article class="artifact-card">
+          <span class="sample-label">Illustrative example</span>
+          <h3>Permission and approval matrix</h3>
+          <p>Each tool and action is matched to its owner, permission ceiling, and approval rule.</p>
+          <div class="artifact-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+        <article class="artifact-card">
+          <span class="sample-label">Illustrative example</span>
+          <h3>Approval packet or run record</h3>
+          <p>The reviewer sees the source, proposed action, evidence, exceptions, and decision status.</p>
+          <div class="artifact-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+        <article class="artifact-card">
+          <span class="sample-label">Illustrative example</span>
+          <h3>Failure and manual recovery</h3>
+          <p>A failed dependency leaves a logged exception, stops the action, and names the manual path.</p>
+          <div class="artifact-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="owner-example-heading">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Owner-operated operating pattern</p>
+        <h2 id="owner-example-heading">A monitoring loop built to stop at the decision.</h2>
+        <p>
+          Across ZeroBeatLabs Infrastructure, deterministic collectors produce recurring
+          health and security artifacts. The Health and Security Monitor Agent reviews
+          those artifacts, surfaces anomalies, and prepares a concise summary for human
+          review. The agent does not change infrastructure state.
+        </p>
+      </div>
+      <div class="proof-panel">
+        <div>
+          <span class="sample-label">Sanitized operating pattern</span>
+          <h3>Collect → review → decide</h3>
+          <p>
+            Scripts collect bounded evidence. The monitor agent interprets the resulting
+            artifacts. A human operator decides whether to investigate, change configuration,
+            restart a service, or take another consequential action.
+          </p>
+        </div>
+        <div class="proof-metric" role="group" aria-label="Authority boundary">
+          <strong>Monitor agent may</strong>
+          <span>Read artifacts · summarize anomalies · draft next checks</span>
+          <strong>Human must</strong>
+          <span>Approve remediation · change systems · own recovery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" aria-labelledby="boundaries-heading">
+    <div class="wrap fit-grid">
+      <div>
+        <p class="eyebrow">Boundaries</p>
+        <h2 id="boundaries-heading">Governance does not make every workflow appropriate.</h2>
+      </div>
+      <div>
+        <ul class="anti-list">
+          <li>No regulated final decisions</li>
+          <li>No uncontrolled customer-facing, financial, destructive, or record-of-truth actions</li>
+          <li>No access beyond the approved, revocable client-controlled scope</li>
+          <li>No workflow without a named human owner, exception path, and manual fallback</li>
+          <li>No outcome, compliance, headcount, or security guarantees</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="agentic-faq">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Common questions</p>
+        <h2 id="agentic-faq">Before live access is granted.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Can discovery happen without system access?</summary><div><p>Yes. Discovery can begin with sanitized or sample-shaped data. Live access is considered only for the approved implementation scope.</p></div></details>
+        <details><summary>Does agentic mean unsupervised?</summary><div><p>No. Authority is defined action by action. Consequential work requires named human approval; only explicitly pre-authorized, bounded, logged, recoverable lower-risk actions may run automatically.</p></div></details>
+        <details><summary>What if the process changes after handoff?</summary><div><p>The approved workflow specification is the boundary. Material process, tool, permission, or approval changes require review before the workflow scope changes.</p></div></details>
+        <details><summary>Is ongoing support required?</summary><div><p>No. Handoff is part of the fixed scope. Optional monitoring and tuning has named responsibilities, limits, and a documented operating boundary.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-ink" aria-labelledby="agentic-contact">
+    <div class="wrap">
+      <p class="eyebrow">Start with the map</p>
+      <h2 id="agentic-contact">Bring one recurring workflow and the person who owns its outcome.</h2>
+      <p class="lede">
+        The first conversation is a workflow mapping call. The paid Blueprint begins only after
+        the workflow, access boundary, and review responsibility are understood.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="https://calendar.app.google/ZzgzTAhCFCk1oxBH8">Map a workflow</a>
+        <a class="button button-secondary" href="mailto:hello@zerobeatlabs.org">Email hello@zerobeatlabs.org</a>
+      </div>
+    </div>
+  </section>
+</SiteShell>

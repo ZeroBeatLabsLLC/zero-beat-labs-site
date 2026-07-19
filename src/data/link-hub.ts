@@ -23,7 +23,7 @@ export const itOperationsLinks: LinkItem[] = [
   {
     label: 'IT Reporting Workflow Sprint',
     description: 'A fixed-scope reporting system built from sanitized operational exports.',
-    href: 'https://zerobeatlabs.org/#sprint',
+    href: 'https://zerobeatlabs.org/services/it-reporting/',
     kind: 'internal',
   },
   {
@@ -34,7 +34,7 @@ export const itOperationsLinks: LinkItem[] = [
   },
   {
     label: 'Getting value from AI without production credentials',
-    description: 'Why export-based, read-only automation is a useful and safer starting point.',
+    description: 'Why the IT Reporting Workflow Sprint starts from sanitized exports instead of production credentials.',
     href: 'https://zerobeatlabs.org/writing/ai-value-without-production-credentials/',
     kind: 'internal',
   },
@@ -70,7 +70,7 @@ export const localBusinessLinks: LinkItem[] = [
 
 export const contactLinks: LinkItem[] = [
   {
-    label: 'Book a 10-minute call',
+    label: 'Book a 10-minute workflow mapping call',
     description: 'Opens the ZeroBeatLabs booking page in Google Calendar.',
     href: 'https://calendar.app.google/ZzgzTAhCFCk1oxBH8',
     kind: 'external',
