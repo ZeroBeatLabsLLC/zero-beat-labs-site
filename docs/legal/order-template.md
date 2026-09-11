@@ -5,7 +5,7 @@ Complete every applicable field before signatures or payment. Do not put real cl
 ## Order and agreement
 
 - Order ID, version, date:
-- Seller: ZeroBeatLabs LLC, Grand Blanc, Michigan; hello@zerobeatlabs.org; (810) 230-4295.
+- Seller: ZeroBeatLabs LLC; business mailing address: 2222 W Grand River Ave, Ste A, Okemos, MI 48864, USA; hello@zerobeatlabs.org; (810) 230-4295.
 - Client legal name and authorized representative:
 - Incorporated Terms: version 1.0, effective 11 September 2026, https://zerobeatlabs.org/terms/; attach the exact accepted copy.
 - Individually agreed departures from Terms, if any:

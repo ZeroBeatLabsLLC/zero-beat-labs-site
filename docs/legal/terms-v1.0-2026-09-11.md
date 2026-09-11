@@ -4,7 +4,7 @@ Version 1.0. Effective 11 September 2026; applies only after publication and acc
 
 ## Agreement and orders
 
-ZeroBeatLabs LLC, a Michigan limited liability company based in Grand Blanc, Michigan ("ZBL," "we," or "us"), provides services to business customers. You must be at least 18 and authorized to act for the business purchasing the services. These Terms apply when you affirmatively accept them at checkout or in a signed agreement incorporating them. Browsing our websites does not place an order.
+ZeroBeatLabs LLC, a Michigan limited liability company with a business mailing address in Okemos, Michigan ("ZBL," "we," or "us"), provides services to business customers. You must be at least 18 and authorized to act for the business purchasing the services. These Terms apply when you affirmatively accept them at checkout or in a signed agreement incorporating them. Browsing our websites does not place an order.
 
 Before payment, we will provide an identified, dated order or statement of work ("Order") describing the services, deliverables, price, currency, payment schedule, delivery expectations, acceptance criteria, cancellation valuation, and any support period. You must accept that Order as well as the applicable version of these Terms. An individually agreed written contract controls conflicting provisions of these Terms; the Order's agreed commercial details apply to that Order. A later invoice or website update does not unilaterally change an existing agreement. Purchases made through a marketplace also remain subject to that marketplace's applicable rules.
 
@@ -101,6 +101,8 @@ Contact us to try to resolve concerns. Michigan law governs, excluding its confl
 Invalid provisions are severed only to the extent permitted by law. Updated Terms apply to new engagements after publication and acceptance. Material changes to ongoing engagements require agreement. The version accepted with your Order remains applicable to that engagement unless the parties agree otherwise.
 
 ZeroBeatLabs LLC
-Grand Blanc, Michigan
+Business mailing address:
+2222 W Grand River Ave, Ste A
+Okemos, MI 48864, USA
 [hello@zerobeatlabs.org](mailto:hello@zerobeatlabs.org)
 [(810) 230-4295](tel:+18102304295)
