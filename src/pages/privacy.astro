@@ -4,23 +4,25 @@ import Article from '../layouts/Article.astro';
 
 <Article
   title="Privacy | ZeroBeatLabs"
-  description="How ZeroBeatLabs handles your data. Short version: these sites collect nothing unless you choose to send it."
+  description="How ZeroBeatLabs handles your data, including static-site hosting, preview forms, and payments."
 >
   <h1>Privacy</h1>
   <p class="lede">
-    Short version: these sites collect nothing unless you choose to send it, and
-    we never sell it or add you to a mailing list. The preview forms are
-    handled by a third-party processor, described below.
+    Short version: the static pages do not use our own analytics, cookies, or
+    trackers. We receive information when you choose to contact us, request a
+    preview, or buy a service, and we never sell it or add you to a mailing
+    list. The preview forms and payment checkout use third-party services,
+    described below.
   </p>
 
   <h2>What these sites collect</h2>
   <p>
-    Nothing automatically. zerobeatlabs.org, the demo at demo.zerobeatlabs.org,
-    and the website previews at web.zerobeatlabs.org are static websites with no
-    accounts, no cookies, and no analytics or third-party trackers. The
-    interactive demo runs entirely in your browser; the data you edit there
-    never leaves your device. The exception is the optional preview forms
-    described below.
+    zerobeatlabs.org, the demo at demo.zerobeatlabs.org, and the website
+    previews at web.zerobeatlabs.org are static websites. Their pages do not
+    use accounts, our own analytics, cookies, or third-party tracking scripts.
+    The interactive demo runs entirely in your browser; the data you edit there
+    never leaves your device. This describes the sites themselves, subject to
+    the hosting, preview-form, and payment-service disclosures below.
   </p>
 
   <h2>The website preview forms</h2>
@@ -52,6 +54,18 @@ import Article from '../layouts/Article.astro';
     >.
   </p>
 
+  <h2>Payments</h2>
+  <p>
+    When you choose to pay for a service, checkout is hosted by Stripe. Stripe
+    collects payment and related checkout information under its own
+    <a href="https://stripe.com/privacy" rel="noopener">privacy policy</a>.
+    ZeroBeatLabs may receive the contact, billing, transaction, and limited
+    payment details Stripe provides to us, such as payment status and the last
+    four digits of a card where available. We use this information to provide
+    and fulfill services, keep required accounting records, and handle refunds
+    or disputes. We do not receive or store full card numbers.
+  </p>
+
   <h2>Links to other services</h2>
   <p>
     Booking and social links open third-party services, including Google
@@ -64,16 +78,23 @@ import Article from '../layouts/Article.astro';
   <p>
     If you email
     <a href="mailto:hello@zerobeatlabs.org">hello@zerobeatlabs.org</a>, we use
-    your message and email address only to respond. We do not add you to any
+    your message and email address to respond and, if you become a customer, to
+    provide and support the services you request. We do not add you to any
     mailing list, and we never sell your details.
   </p>
 
-  <h2>No selling</h2>
+  <h2>Sharing and retention</h2>
   <p>
-    We never sell or rent your personal information. We share it only with the
-    service providers described above, and only to deliver the preview or reply
-    you asked for.
+    We never sell or rent your personal information. We may share it with the
+    service providers described above, including GitHub for hosting, Web3Forms
+    and its spam-filtering providers for preview forms, and Stripe for payments,
+    as needed to operate the sites, respond to you, provide services, process
+    payments, and meet legal or accounting obligations. We may also disclose
+    information when required by law or to protect our rights, users, or
+    services. We keep information only as long as reasonably necessary for
+    those purposes, including recordkeeping, refund, dispute, and legal
+    requirements.
   </p>
 
-  <p class="note">Last updated 18 July 2026.</p>
+  <p class="note">Last updated 11 September 2026.</p>
 </Article>

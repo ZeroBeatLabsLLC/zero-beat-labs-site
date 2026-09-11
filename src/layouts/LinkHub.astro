@@ -46,13 +46,22 @@ const ogImage = new URL('/og.png', Astro.site);
       <div class="wrap link-hub-footer">
         <a href="/">Return to zerobeatlabs.org</a>
         <span aria-hidden="true">·</span>
-        <a href="/privacy/">Privacy</a>
+        <a class="legal-link" href="/terms/">Terms</a>
+        <span aria-hidden="true">·</span>
+        <a class="legal-link" href="/privacy/">Privacy</a>
       </div>
     </footer>
   </body>
 </html>
 
 <style>
+  .legal-link {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
   .link-hub-footer {
     display: flex;
     flex-wrap: wrap;
